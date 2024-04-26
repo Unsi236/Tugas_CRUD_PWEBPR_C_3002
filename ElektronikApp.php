@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Elektroik App</title>
-    <link rel="stylesheet" href="styleelektronik.css">
+    <!-- <link rel="stylesheet" href="stylelogin.css"> -->
+    <link rel="stylesheet" href="stylee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    .tabel {
+        margin: 0 auto; /* Menengahkan tabel */
+    }
+
+    h4 {
+    width: 710px;
+    text-align: justify;
+}
+
+h4 a {
+    padding: 10px;
+    color: white;
+    background: limegreen;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+h4 a:hover {
+    background: transparent;
+    color: black;
+}
+</style>
 <body>
     <div class="beranda">
         <div class="heading">
@@ -19,18 +43,38 @@
         </div>
         <ul>
             <li><i class="fa-solid fa-gauge-high"></i>&nbsp;&nbsp;<span>Dashboard</span></li>
-            <li><i class="fa-solid fa-display"></i>&nbsp;&nbsp;<span>Komputer</span></li>
+            <li class="tombol-tambah"> <a href="tambahdata.php"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;<span>Tambah Data History</span></a></li>
+            <!-- <li><i class="fa-solid fa-display"></i>&nbsp;&nbsp;<span>Komputer</span></li>
             <li><i class="fa-solid fa-camera-retro"></i>&nbsp;&nbsp;<span>Kamera</span></li>
-            <li><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;&nbsp;<span>Handphone</span></li>
-            <li><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;<span>Log Out</span></li>
+            <li><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;&nbsp;<span>Handphone</span></li> -->
+            <!-- <li><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;<span>Update Data</span></li>
+            <li ><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;<span>Hapus Data</span></li> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <li><a href="login.php"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;<span>Log Out</span></a></li>
         </ul>
     </div>
 
     <div class="responsivetable">
         <div class="table_container">
             <h2>History Pembeli</h2>
-            <table class="tbl">
-                <thead>
+            <br>
+            <h4><a href="tambahdata.php"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Tambah Data History</a></h4>
+            <br>
+            <table align="center" class="tbl">
+                <thead> 
                     <tr>
                         <th>No</th>
                         <th>Nama Pembeli</th>
@@ -39,74 +83,28 @@
                         <th>Total Belanja</th>
                         <th colspan="2">Aksi</th>
                     </tr>
+                    <?php
+                    include "koneksi.php";
+                    $no=1;
+                    $data = mysqli_query($conn,"select * from tbelektronik");
+                    while ($row = mysqli_fetch_array($data)) {
+                    ?>
+                    <tr>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $row['Nama_Pembeli']; ?></td>
+                        <td><?php echo $row['Alamat']; ?></td>
+                        <td><?php echo $row['Nomor_Telepon']; ?></td>
+                        <td><?php echo $row['Total_Belanja']; ?></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $row['ID_Pembeli']; ?>"><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Edit</a> ||
+                            <a href="hapus.php?namapembeli=<?php echo $row['Nama_Pembeli']; ?>"  onclick="return confirm('Apakah anda yakin akan menghapus data ini?')"><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;Hapus</a>
+                        </td>
+                    </tr>
+                    <?php
+                        }
+                    ?>
+
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>01</td>
-                        <td>Dwi Atikoh</td>
-                        <td>Sukowono</td>
-                        <td>08962618xxx</td>
-                        <td>3.500.000</td>
-                        <td>
-                            <button class="btn_edit"><iclass="button _dit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        </td>
-                        <td>
-                            <button class="btn_delete"><iclass="button_delete"><i class="fa-solid fa-trash"></i>Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Ajay Tenggara</td>
-                        <td>Sukowono</td>
-                        <td>08962618xxx</td>
-                        <td>3.500.000</td>
-                        <td>
-                            <button class="btn_edit"><iclass="button_edit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        </td>
-                        <td>
-                            <button class="btn_delete"><iclass="button_delete"><i class="fa-solid fa-trash"></i>Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Intan Andini</td>
-                        <td>Jember</td>
-                        <td>087012638xxx</td>
-                        <td>5.800.000</td>
-                        <td>
-                            <button class="btn_edit"><iclass="button_edit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        </td>
-                        <td>
-                            <button class="btn_delete"><iclass="button_delete"><i class="fa-solid fa-trash"></i>Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>04</td>
-                        <td>Yasin Nur Aziz</td>
-                        <td>Patrang</td>
-                        <td>085389018xxx</td>
-                        <td>10.000.000</td>
-                        <td>
-                            <button class="btn_edit"><iclass="button_edit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        </td>
-                        <td>
-                            <button class="btn_delete"><iclass="button_delete"><i class="fa-solid fa-trash"></i>Hapus</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>05</td>
-                        <td>Nusa Perdana</td>
-                        <td>Bangsalsari</td>
-                        <td>08962618xxx</td>
-                        <td>7.800.000</td>
-                        <td>
-                            <button class="btn_edit"><iclass="button_edit"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
-                        </td>
-                        <td>
-                            <button class="btn_delete"><iclass="button_delete"><i class="fa-solid fa-trash"></i>Hapus</button>
-                        </td>
-                    </tr>
-                </tbody>
             </table>
         </div>
     </div>
@@ -119,11 +117,11 @@
                     <button type="submit"><i class="fa-brands fa-searchengin"></i></button>
                 </div>
                 <div class="user">
-                    <a href="#" class="button plus"><i class="fa-solid fa-plus"></i></a>
+                    <!-- <a href="#" class="button plus"><i class="fa-solid fa-plus"></i></a>
                     <a href="#" class="button minus"><i class="fa-solid fa-square-minus"></i></a>
                     <a href="#" class="button edit"><i class="fa-solid fa-pen-to-square"></i></a>
                     <a href="#" class="button delete"><i class="fa-solid fa-trash"></i></a>
-                    <a href="#" class="button account"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" class="button account"><i class="fa-solid fa-user"></i></a> -->
                 </div>
             </div>
         </div>

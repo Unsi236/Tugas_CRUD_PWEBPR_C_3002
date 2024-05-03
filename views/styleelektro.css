@@ -95,7 +95,7 @@ body {
 }
 
 .tbl thead tr th{
-    padding: 70px;
+    padding: 300px;
     font-size: 0.9rem;
     padding: 0.8rem;
     letter-spacing: 0.2rem;
@@ -109,7 +109,7 @@ body {
     font-weight: normal;
     text-align: center;
     border: 1px solid #aab7b8;
-    padding: 90px;
+    padding: 200px;
 }
 .tbl thead tr td{
     padding: 10px 8px;

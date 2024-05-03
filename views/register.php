@@ -28,7 +28,7 @@
             </div>
             <div class="links">
                 <!-- <a href= "#">Forgot Password</a> -->
-                <a href= "login.html">Sign In</a>
+                <a href= "login.php">Sign In</a>
             </div>
             <input type="submit" value="Daftar">
         </form>

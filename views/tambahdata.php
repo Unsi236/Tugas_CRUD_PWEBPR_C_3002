@@ -14,7 +14,7 @@
 
         }
         table {
-            width: 450px;
+            width: 700px;
             height: 250px;
             border: 10px solid #2C3333;
             background-color: white;
@@ -50,12 +50,8 @@
 <body>
     <h2>Form Tambah Data Pembeli</h2>
 
-    <form action= "insert.php" method="post">
+    <form action="elektronik/create" method="post" enctype="multipart/form-data">
         <table align="center">
-            <!-- <tr>
-                <td>ID Pembeli</td>
-                <td><input type="text" name="idpembeli" placeholder="ID Pembeli" size="11"></td>
-            </tr> -->
             <tr>
                 <td>Nama Pembeli</td>
                 <td><input type="text" name="namapembeli" placeholder="Nama Pembeli" size="11"></td>
@@ -73,6 +69,10 @@
                 <td><input type="text" name="totalbelanja" placeholder="Total Belanja" size="11"></td>
             </tr>
             <tr>
+                <td>Gambar Barang</td>
+                <td><input type="file" name="gambarpembeli"></td>
+            </tr>
+            <tr>
                 <td>
                     <input type="submit" name="simpan" value="Simpan">
                     <input type="reset" name="batal" value="Batal">
@@ -80,5 +80,7 @@
             </tr>
         </table>
     </form>
+    <?php 
+    ?>
 </body>
 </html>

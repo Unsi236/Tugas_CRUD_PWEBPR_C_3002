@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Elektronik App</title>
     <!-- <link rel="stylesheet" href="stylelogin.css"> -->
@@ -44,11 +45,6 @@ h4 a:hover {
         <ul>
             <li><i class="fa-solid fa-gauge-high"></i>&nbsp;&nbsp;<span>Dashboard</span></li>
             <li class="tombol-tambah"> <a href="tambahdata.php"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;<span>Tambah Data History</span></a></li>
-            <!-- <li><i class="fa-solid fa-display"></i>&nbsp;&nbsp;<span>Komputer</span></li>
-            <li><i class="fa-solid fa-camera-retro"></i>&nbsp;&nbsp;<span>Kamera</span></li>
-            <li><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;&nbsp;<span>Handphone</span></li> -->
-            <!-- <li><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;<span>Update Data</span></li>
-            <li ><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;<span>Hapus Data</span></li> -->
             <br>
             <br>
             <br>

@@ -1,6 +1,6 @@
 RewriteEngine On
-RewriteBase /elektronik/
+RewriteBase /Tugas_CRUD_PWEBPR_C_3002/
 RewriteRule ^index\\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /elektronik/index.php [L]
+RewriteRule . /Tugas_CRUD_PWEBPR_C_3002/index.php [L]

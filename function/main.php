@@ -1,7 +1,7 @@
 <?php 
 
 include_once 'controllers/elektronikcontroller.php';
-require_once 'routes/route.php';
+require_once 'route/root.php';
 
 // Mendapatkan metode HTTP yang digunakan dalam permintaan
 $httpMethod = $_SERVER['REQUEST_METHOD'];

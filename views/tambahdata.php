@@ -50,7 +50,7 @@
 <body>
     <h2>Form Tambah Data Pembeli</h2>
 
-    <form action="elektronik/create" method="post" enctype="multipart/form-data">
+    <form action="insert" method="post" enctype="multipart/form-data">
         <table align="center">
             <tr>
                 <td>Nama Pembeli</td>

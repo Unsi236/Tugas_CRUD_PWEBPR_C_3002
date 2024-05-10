@@ -1,5 +1,5 @@
 <?php
-require_once "model/rental.php";
+require_once "model/elektronik.php";
 require_once "function/function.php";
 require_once "config/database.php";
 
@@ -30,10 +30,10 @@ class elektronikcontroller {
     loadView('updatepage');
   }
   public function login(){
-    loadView('updatepage');
+    loadView('login');
   }
   public function register(){
-    loadView('updatepage');
+    loadView('register');
   }
 }
 

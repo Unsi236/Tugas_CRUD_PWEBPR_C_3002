@@ -16,17 +16,3 @@ try {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 ?>
-
-
-
-<!-- // $host ='localhost';
-// $username ='root';
-// $password = '';
-// $database = 'dataelektronik';
-
-// $conn = new mysqli($host, $username, $password, $database);
-// if ($conn->connect_error) {
-//     die("Database gagal dikoneksikan". $conn->connect_error);
-// }
-
-// // echo "Koneksi berhasil"; -->
